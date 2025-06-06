@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_shadow_radius">1.0px</dimen>
+    <dimen name="text_shadow_dx">1.0px</dimen>
+    <dimen name="text_shadow_dy">1.0px</dimen>
+    <dimen name="key_padding_outer">2.0dip</dimen>
+    <dimen name="key_padding_bottom">2.0dip</dimen>
+    <dimen name="key_padding_inner">3.0dip</dimen>
+    <dimen name="sym_grid_bg_corner">3.0dip</dimen>
+    <dimen name="function_bar_addon_padding">0.0dip</dimen>
+    <dimen name="keyboard_main_only_text_size">20.0sp</dimen>
+    <dimen name="keyboard_main_only_min_text_size">12.0sp</dimen>
+    <dimen name="keyboard_main_text_size">18.0sp</dimen>
+    <dimen name="keyboard_alt_text_size">14.0sp</dimen>
+    <dimen name="hardkeyboard_candidate_text_size">22.0dip</dimen>
+    <dimen name="hardkeyboard_number_text_size">16.0dip</dimen>
+    <dimen name="candidate_small_textsize">12.0sp</dimen>
+    <dimen name="candidate_textsize">18.0sp</dimen>
+    <dimen name="candidate_Chs_textsize">20.0sp</dimen>
+    <dimen name="bihua_composition_size">18.0sp</dimen>
+    <dimen name="preview_textsize">25.0sp</dimen>
+    <dimen name="preview_extendkey_textsize">26.0sp</dimen>
+    <dimen name="preview_extendkey_flag_textsize">14.0sp</dimen>
+    <dimen name="paopao_title_textsize">20.0sp</dimen>
+    <dimen name="paopao_notification_title_textsize">18.0sp</dimen>
+    <dimen name="paopao_summary_textsize">12.0sp</dimen>
+    <dimen name="paopao_percent_textsize">12.0sp</dimen>
+    <dimen name="adjust_userword_priority_title">18.0sp</dimen>
+    <dimen name="adjust_userword_priority">12.0sp</dimen>
+    <dimen name="editbar_textsize">16.0sp</dimen>
+    <dimen name="dlg_btn_textsize">18.0sp</dimen>
+    <dimen name="dlg_msg_textsize">18.0sp</dimen>
+    <dimen name="guide_title_text_size">17.0sp</dimen>
+    <dimen name="guide_text_size">14.0sp</dimen>
+    <dimen name="magic_text_size">14.0sp</dimen>
+    <dimen name="emotion_textsize">19.0sp</dimen>
+    <dimen name="voice_text_size">13.0sp</dimen>
+    <dimen name="enter_textsize">16.0sp</dimen>
+    <dimen name="split_textsize">18.0sp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+
+
+</resources>

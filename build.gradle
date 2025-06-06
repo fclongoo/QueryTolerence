@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import java.text.SimpleDateFormat
+
+ext {
+    minSdkVersion = 26
+    targetSdkVersion = 33
+    compileSdkVersion = 33
+    supportLibraryVersion = '33'
+
+    versionCode = 22
+    versionName = "0101-O"
+    versionBuild = "20180101000000"
+    buildComputerId = "O"
+    applicationId = "com.fclongoo.unnamed"
+}
+
+def parseLocalProperties() {
+    File file = rootProject.file('local.properties')
+    if (file.exists()) {
+        InputStream inputStream = rootProject.file('local.properties').newDataInputStream()
+        Properties properties = new Properties()
+        properties.load(inputStream)
+
+        if (properties.containsKey("buildComputerId")) {
+            ext.buildComputerId = properties.getProperty("buildComputerId")
+        }
+
+        if (properties.containsKey("applicationId")) {
+            ext.applicationId = properties.getProperty("applicationId")
+        }
+    }
+}
+
+def generalVersion() {
+    SimpleDateFormat df = new SimpleDateFormat("yy.MMdd")
+    df.setTimeZone(TimeZone.getDefault())
+    ext.versionName = df.format(new Date()) + "-" + ext.buildComputerId
+
+    df = new SimpleDateFormat("yy")
+    df.setTimeZone(TimeZone.getDefault())
+    ext.versionCode = Integer.parseInt(df.format(new Date()))
+
+    df = new SimpleDateFormat("\"yyyyMMddHHmmss\"")
+    df.setTimeZone(TimeZone.getDefault())
+    ext.versionBuild = df.format(new Date())
+}
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://jitpack.io' }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.1'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+    }
+
+}
+
+allprojects {
+    parseLocalProperties()
+    generalVersion()
+}
+
+dependencies {
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
